@@ -11,9 +11,7 @@ int main(int argc, char **argv)
 
   Airport airport;
 
-  ros::ServiceServer ss_add_flight = n.advertiseService("add_flight", &Airport::addFlight, &airport);
-  ros::ServiceServer ss_add_wp = n.advertiseService("add_wp", &Airport::addWp, &airport);
-  ros::ServiceServer ss_clear_wp = n.advertiseService("clear_wp", &Airport::clearWp, &airport);
+  ros::ServiceServer ss = n.advertiseService("commander_service", &Airport::command, &airport);
 
   while (ros::ok())
   {

@@ -1,3 +1,4 @@
+uint32 code 
 string id
 float64 posx
 float64 posy
@@ -9,3 +10,5 @@ Waypoint[] wps
 
 ---
 
+bool achieved
+string expl

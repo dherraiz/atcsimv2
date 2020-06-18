@@ -65,9 +65,7 @@ geometry_msgs
 ## Generate services in the 'srv' folder
  add_service_files(
    FILES
-   AddFlight.srv
-   AddWp.srv
-   ClearWp.srv
+   CommanderService.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -227,6 +225,9 @@ include_directories(
 
 add_executable(commander src/commander.cpp)
 target_link_libraries(commander ${catkin_LIBRARIES})
+
+add_executable(generator src/generator.cpp)
+target_link_libraries(generator ${catkin_LIBRARIES})
 
 
 add_executable(atcsim_node src/atcsim.cpp)
